@@ -1,0 +1,281 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+    background: #5da1c3;
+    padding: 15px 0;
+}
+
+/* Navbar container */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo img {
+    height: 10px;
+    
+}
+/* Уменьшаем размер логотипа и фиксируем его в верхнем левом углу */
+.navbar-brand img {
+    height: 60px; /* Укажите нужную высоту */
+    width: auto;  /* Автоматическая ширина для сохранения пропорций */
+    position: absolute;
+    top: 2px;  /* Отступ от верхнего края */
+    left: 30px; /* Отступ от левого края */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(31, 30, 30);
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: rgb(51, 49, 49);
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Section */
+main {
+    background: #f4f4f4;
+    padding: 50px 0;
+}
+
+/* Container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.main-content h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.main-content p {
+    font-size: 18px;
+    color: #666;
+    margin: 20px 0;
+}
+
+/* Button */
+.btn1 {
+    display: inline-block;
+    padding: 12px 24px;
+    background: rgb(104, 171, 213);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    transition: 0.3s;
+}
+
+
+/* Main Image */
+.main-image img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .main-image img {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+.nav-link {
+    color: white;  /* белый текст */
+    background-color: transparent;  /* прозрачный фон */
+    border: 1px solid white;  /* белая рамка */
+    padding: 10px 20px;  /* отступы */
+    text-decoration: none;  /* убираем подчеркивание */
+    border-radius: 5px;  /* скругленные углы (если нужно) */
+    transition: background-color 0.3s ease, color 0.3s ease;  /* плавное изменение */
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);  /* слегка видимый фон при наведении */
+    color: #fff;  /* белый цвет текста при наведении */
+}
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Styling */
+footer {
+    background: #537690;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Footer Sections */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+/* Section Headings */
+.footer-section h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* Links */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f1c40f;
+}
+
+/* Contact Info */
+.footer-section p {
+    font-size: 14px;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 14px;
+}

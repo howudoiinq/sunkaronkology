@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.header img {
+    max-width: 150px;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Левый верхний угол: кнопка "Назад" */
+.back-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    background: #6b99ca;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background: #0056b3;
+}
+
+/* Контейнер формы */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 520px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    text-align: left;
+    margin: 5px 0;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.date-select {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-select select {
+    width: 32%;
+}
+
+.button1 {
+    background:  rgb(104, 171, 213);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #215188;
+}
+
+/* Боковые кнопки "Главная" и "Назад" */
+.side-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    background:  #6399c2;
+    border-radius: 5px;
+}
+
+.side-button.left {
+    left: 15px;
+}
+
+.side-button.right {
+    right: 15px;
+}
+
+.side-button:hover {
+    background: #0056b3;
+}

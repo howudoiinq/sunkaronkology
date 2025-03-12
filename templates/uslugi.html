@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/uslugi.css') }}">
+</head>
+<body>
+
+    <!-- Кнопка "Назад" -->
+    <a href="javascript:history.back()" class="back-button">← Назад</a>
+
+    <div class="header">
+        <h1>Добро пожаловать в нашу систему</h1>
+        <img src="{{ url_for('static', filename='icons/sunkar-logo.png') }}" alt="Logo">
+    </div>
+
+    <div class="container">
+        <h2>Введите данные</h2>
+        <form action="/submit" method="POST">
+            <label for="first_name">Имя:</label>
+            <input type="text" id="first_name" name="first_name" required>
+
+            <label for="last_name">Фамилия:</label>
+            <input type="text" id="last_name" name="last_name" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+
+           
+            <!-- Выбор медицинской услуги -->
+            <label for="service">Выберите услугу:</label>
+            <select id="service" name="service" required>
+                <option value="" disabled selected>Выберите услугу</option>
+                <option value="consultation">Консультация онколога</option>
+                <option value="chemotherapy">Химиотерапия</option>
+                <option value="radiotherapy">Лучевая терапия</option>
+                <option value="surgery">Хирургическое лечение</option>
+                <option value="palliative">Паллиативная помощь</option>
+                <option value="rehabilitation">Реабилитация</option>
+            </select>
+
+            <!-- Используем правильную ссылку для Flask -->
+            <a href="{{ url_for('tickets') }}" class="button1">Записаться в электронную очередь</a>
+        </form>
+            </div>
+
+    </div>
+
+    <!-- Боковые кнопки -->
+
+
+</body>
+</html>

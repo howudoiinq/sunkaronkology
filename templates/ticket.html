@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Талон на приём</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/ticket.css') }}">
+</head>
+<body>
+    <a href="javascript:history.back()" class="back-button">← Назад</a>
+    <div class="ticket-container">
+       
+        
+        <!-- Первый талон -->
+        <div class="ticket">
+            <div class="ticket-header">
+                <h2>Поликлиника «Сункар»</h2>
+                <p>Дата: <span id="date"></span></p>
+            </div>
+            
+            <div class="ticket-body">
+                <p><strong>Пациент:</strong>....</p>
+                <p><strong>Врач:</strong> Карпов А. П. (Онколог)</p>
+                <p><strong>Кабинет:</strong> 12</p>
+                <p><strong>Время приёма:</strong> 14:30</p>
+                <p><strong>Место в очереди:</strong> 3</p>
+                
+                <!-- Выделенный номер талона -->
+                <div class="ticket-number">
+                    A-102
+                </div>
+            </div>
+            
+            <div class="ticket-footer">
+                <p>Спасибо за обращение! Пожалуйста, приходите вовремя.</p>
+            </div>
+        </div>
+
+        <!-- Второй талон (размещён ниже, с другим цветом) -->
+        <div class="ticket second-ticket">
+            
+
+            <div class="ticket-body2">
+                <p class="alert-text">✅ Вас вызывают! Ваша очередь подошла.</p>
+
+                <p><strong>Пациент:</strong>....</p>
+                <p><strong>Врач:</strong> Карпов А. П. (Онколог)</p>
+                <p><strong>Кабинет:</strong> 12</p>
+                <p><strong>Время приёма:</strong> 14:30</p>
+
+                <!-- Выделенный номер талона с иконками -->
+                <div class="ticket-number-container">
+                    <img src="{{ url_for('static', filename='icons/6098913.png') }}" alt="Наши партнеры">
+                    <img src="{{ url_for('static', filename='icons/arrow.png') }}" alt="Стрелка" class="ticket-icon">
+                    <div class="ticket-number2">A-102</div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll("#date").forEach(el => {
+            el.textContent = new Date().toLocaleDateString();
+        });
+    </script>
+
+</body>
+</html>

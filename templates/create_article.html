@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+О компании
+{% endblock %}
+
+{% block body %}
+<div class="container d-flex flex-column align-items-center justify-content-center vh-100">
+    <h1 class="text-center mb-4">Добавление пациентов</h1>
+    <form method="post" class="w-50">
+        <input type="text" name="title" id="title" class="form-control mb-3" placeholder="Введите название">
+        <textarea name="intro" id="intro" class="form-control mb-3" placeholder="Введите описание" rows="3"></textarea>
+        <textarea name="text" id="text" class="form-control mb-3" placeholder="Введите текст" rows="5"></textarea>
+        <input type="submit" class="btn btn-success w-100" value="Отправить">
+    </form>
+</div>
+
+
+
+{% endblock %}

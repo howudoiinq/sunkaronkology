@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+page about us
+{% endblock %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Section</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключаем CSS -->
+</head>
+<body>
+
+    <!-- Main Section -->
+    <main>
+        <div class="container">
+            <div class="main-content">
+                <h1>Поликлиника Cункар</h1>
+                <p>В поликлинике СУНКАР мы стремимся к вашему благополучию, предоставляя доступ к широкому спектру медицинских услуг и индивидуализированному подходу к каждому пациенту..</p>
+                <a href="{{ url_for('uslugi') }}" class="btn1">Записаться в электронную очередь</a>
+            </div>
+            <div class="main-image">
+                <img src="{{ url_for('static', filename='icons/mainicon.avif') }}" alt="Facebook">
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
+
+{% endblock %}

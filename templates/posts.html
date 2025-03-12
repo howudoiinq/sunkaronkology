@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+О компании
+{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/posts.css') }}">
+<div class="container d-flex flex-column align-items-center justify-content-center vh-100">
+    <h1 class="text-center mb-4">Все пациенты на базе</h1>
+    
+    {% if articles %}
+    {% for el in articles %}
+    <div class="alert alert-info">
+        <h2>{{ el.title }}</h2>
+        <p>{{ el.intro }}</p>
+        <p><b>Дата: {{ el.date.date() }}</b></p>
+        <a href="/posts/{{ el.id }}" class="btn btn-warning">Детальнее</a>
+        <a href="{{ url_for('delete_article', id=el.id) }}" 
+   class="btn btn-danger"
+   onclick="return confirm('Вы уверены, что хотите удалить эту статью?');">
+   Удалить
+</a>
+
+    </div>
+    
+    {% endfor %}
+{% else %}
+    <p class="text-center">Нет записей в базе данных.</p>
+{% endif %}
+
+</div>
+
+
+
+
+{% endblock %}

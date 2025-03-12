@@ -1,0 +1,92 @@
+/* Общий стиль для контейнера */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: left; /* Выровнять весь текст по левому краю */
+}
+
+/* Заголовок */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: left; /* Выровнять заголовок по левому краю */
+}
+
+/* Карточка статьи */
+.alert {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(129, 171, 217, 0.1);
+    border-left: 5px solid #2e4c6c;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+    text-align: left; /* Выровнять текст в карточке по левому краю */
+}
+
+.alert:hover {
+    transform: scale(1.02);
+}
+
+/* Заголовок статьи */
+.alert h2 {
+    font-size: 1.5rem;
+    color: #3a73b0;
+    text-align: left; /* Выровнять заголовок статьи по левому краю */
+}
+
+/* Кнопки */
+.btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Оставить кнопки в строке */
+}
+
+/* Кнопка "Детальнее" */
+.btn-warning {
+    background-color: #2178bb;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #1c1fba;
+    transform: translateY(-2px);
+}
+
+/* Кнопка "Удалить" */
+.btn-danger {
+    background-color: #2b70bd;
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #235fc8;
+    transform: translateY(-2px);
+}
+
+/* Выравнивание кнопок */
+.alert .btn {
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: left; /* Выровнять кнопки по левому краю */
+}
+
+/* Общий текстовый стиль */
+.text-center {
+    text-align: left; /* Изменено с center на left */
+    color: #444;
+}
+
+/* Медиа-запрос для адаптивности */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+    }
+}

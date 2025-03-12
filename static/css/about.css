@@ -1,0 +1,49 @@
+/* Общий контейнер */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Заголовок "О компании" */
+.about-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1b1d1d; /* Тёмно-зелёный цвет */
+    margin-bottom: 20px;
+    margin-right: 38px;
+}
+
+/* Текст "О компании" */
+.about-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    text-align: justify;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Блок "Наши партнеры" */
+.partners {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+/* Заголовок "Наши партнеры" */
+.partners-title {
+    font-size: 48px;
+    color: #434545;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Логотипы партнеров */
+.partnersimg img {
+    max-width: 650px;
+    height: auto;
+    display: inline-block;
+}
