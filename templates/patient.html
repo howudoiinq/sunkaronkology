@@ -1,0 +1,12 @@
+<h1>Пациентская панель</h1>
+<h2>Записаться на прием</h2>
+<form action="{{ url_for('book_appointment') }}" method="POST">
+    <label for="service_id">Услуга:</label>
+    <select name="service_id" id="service_id">
+        <!-- Пример услуг -->
+        <option value="1">Лучевая терапия</option>
+        <option value="2">Химиотерапия</option>
+        <option value="3">Консультация онколога</option>
+    </select>
+    <button type="submit">Записаться</button>
+</form>

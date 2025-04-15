@@ -6,4 +6,16 @@
 <h1>Добро пожаловать, доктор!</h1>
 <p>Здесь можно просматривать записи пациентов.</p>
 <a href="{{ url_for('logout') }}" class="btn btn-danger">Выйти</a>
+<h1>Докторская панель</h1>
+<h2>Очередь</h2>
+<ul>
+    {% for item in queue %}
+        <li>{{ item.user_id }} - {{ item.service_id }} - {{ item.time }} 
+            <form action="{{ url_for('notify_patient', queue_id=item.id) }}" method="POST">
+                <button type="submit">Пациент обслужен</button>
+            </form>
+        </li>
+    {% endfor %}
+</ul>
+
 {% endblock %}
